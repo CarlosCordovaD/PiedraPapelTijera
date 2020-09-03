@@ -29,13 +29,13 @@ function getData(){
         img_div.innerHTML = '<img src="images/man.png" alt="Man">';    
     }
     if(colores == 'rojo'){
-        document.getElementById('body').classList.add(colores);
+        document.getElementById('body').classList.add('rojo');
     }
     else if(colores == 'negro'){
-        document.getElementById('body').classList.add(colores);
+        document.getElementById('body').classList.add('negro');
     }
     else if(colores == 'morado'){
-        document.getElementById('body').classList.add(colores);
+        document.getElementById('body').classList.add('morado');
     }
     else {
         document.getElementById('body').classList.add('azul');
