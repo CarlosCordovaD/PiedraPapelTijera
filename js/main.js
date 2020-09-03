@@ -13,6 +13,7 @@ const img_div = document.getElementById('img');
 function getData(){
     const nombres = document.getElementById("nombre").value;
     const generos = document.getElementById("genero").value;  
+    const colores = document.getElementById("color").value;  
     document.getElementById('principal').classList.toggle('ocultar');
     if(nombres == ''){
         user_div.innerHTML = 'Usuario';
@@ -22,11 +23,21 @@ function getData(){
     }
     if(generos == 'mujer')
     {   
-        img_div.innerHTML = '<img src="images/woman.png" alt="Woman">';
-        document.getElementById('body').classList.add('rojo');
+        img_div.innerHTML = '<img src="images/woman.png" alt="Woman">';        
     }
     else{
-        img_div.innerHTML = '<img src="images/man.png" alt="Man">';
+        img_div.innerHTML = '<img src="images/man.png" alt="Man">';    
+    }
+    if(colores == 'rojo'){
+        document.getElementById('body').classList.add(colores);
+    }
+    else if(colores == 'negro'){
+        document.getElementById('body').classList.add(colores);
+    }
+    else if(colores == 'morado'){
+        document.getElementById('body').classList.add(colores);
+    }
+    else {
         document.getElementById('body').classList.add('azul');
     }
 

@@ -8,7 +8,7 @@
     <meta property="og:title" content="Piedra, Papel y Tijera">
     <meta property="og:type" content="website">
     <meta property="og:description" content="El clásico juego de Piedra Papel y Tijera">
-    <meta property="og:image" content="../images/fondo.jpg">
+    <meta property="og:image" content="images/fondo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/juego.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300;500;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
      <section class="principal" id="principal">
      <section id="contenedor" class="contenedor azul">
          <h1 class="animated2 bounce">
-             BIENVENIDO
+             BIENVENID@
          </h1>
          <form action="" id="form">
             <input maxlength="10" required type="text" name="nombre" id="nombre" placeholder="Tu Nombre">
@@ -26,6 +26,13 @@
                 <option required hidden selected>Elíge tu género</option>
                 <option value="hombre">Hombre</option>
                 <option value="mujer">Mujer</option>
+            </select>
+            <select name="color" id="color">
+                <option required hidden selected>Elíge un color</option>
+                <option value="azul">Azul</option>
+                <option value="rojo">Rojo</option>
+                <option value="negro">Negro</option>
+                <option value="morado">Morado</option>
             </select>
             <button class="animated pulse" onclick="getData()" type="button">JUGAR</button>
          </form>         
