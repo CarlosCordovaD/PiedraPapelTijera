@@ -36,11 +36,11 @@ nav img {
 }
 .sombra{
     -webkit-box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.19);
--moz-box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.19);
-box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.19);
+    box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.19);
 }
-.user-label img{width: 70px;}
-.pc-label img{width: 70px;}
+.user-label img{width: 90px;}
+.pc-label img{width: 90px;}
 .user-label {
     grid-area: usuario;
 }
@@ -86,4 +86,102 @@ span{font-size: 5vw;}
 .opciones div img{
     width: 80px;
     padding: 2vw;
+}
+.principal{
+    position: relative;
+    display: flex;
+    align-content: center;
+}
+.contenedor {
+    position: fixed;    
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 999;
+    padding-top: 12vw;
+    background-image: linear-gradient( to top, #ABDCFF 0%, #0396FF 70%);
+    background-repeat: no-repeat;
+}
+.ocultar {
+    display: none;
+}
+.contenedor h1 {
+    font-size: 6vw;
+}
+.contenedor form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+}
+input, select, button{
+    padding: 1vw 1vw;
+    border: 2px solid white;
+    background-color: rgba(255,255,255, .1);
+    border-radius: 15px;
+    margin-top: 30px;
+    color: white;
+    font-size: 1.4vw;
+}
+::-webkit-input-placeholder{
+    font-size: 1.4vw;
+    color: white;
+}
+button{
+    cursor: pointer;
+    background-color: white;
+    color: #0396FF;
+    font-size: 2vw;
+}
+option {
+ font-size: 1.4vw;
+ color: #0396FF;
+ background-color: rgba(255,255,255, .1);
+}
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+.animated2 {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: initial;
+}
+input:focus, input.form-control:focus, button:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+  }
+  .bounce {
+    animation-name: bounce;
+  }
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+.pulse {
+animation-name: pulse;
+animation-duration: 1s;
+}
+@media screen and (max-width: 700px){
+    .marcador,.opciones{
+        width: 90%;
+        margin: 10vw auto; 
+    }
+    .opciones div img{
+        width: 60px;
+        padding: 1vw;
+    }
+    .user-label img{width: 70px;}
+    .pc-label img{width: 70px;}
+
 }
