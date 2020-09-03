@@ -8,12 +8,29 @@ const piedra_div = document.getElementById('roca');
 const papel_div = document.getElementById('papel');
 const tijera_div = document.getElementById('tijera');
 const user_div = document.getElementById('Usuario'); 
+const img_div = document.getElementById('img'); 
 
 function getData(){
     const nombres = document.getElementById("nombre").value;
     const generos = document.getElementById("genero").value;  
     document.getElementById('principal').classList.toggle('ocultar');
-    user_div.innerHTML = nombres;
+    if(nombres == ''){
+        user_div.innerHTML = 'Usuario';
+    }
+    else{
+        user_div.innerHTML = nombres;
+    }
+    if(generos == 'mujer')
+    {   
+        img_div.innerHTML = '<img src="images/woman.png" alt="Woman">';
+        document.getElementById('body').classList.add('rojo');
+    }
+    else{
+        img_div.innerHTML = '<img src="images/man.png" alt="Man">';
+        document.getElementById('body').classList.add('azul');
+    }
+
+    
 }
 function movidaPc(){
     const opciones = ['roca','papel','tijera'];
