@@ -15,33 +15,14 @@ function getData(){
     const generos = document.getElementById("genero").value;  
     const colores = document.getElementById("color").value;  
     document.getElementById('principal').classList.toggle('ocultar');
-    if(nombres == ''){
-        user_div.innerHTML = 'Usuario';
-    }
-    else{
-        user_div.innerHTML = nombres;
-    }
-    if(generos == 'mujer')
-    {   
-        img_div.innerHTML = '<img src="images/woman.png" alt="Woman">';        
-    }
-    else{
-        img_div.innerHTML = '<img src="images/man.png" alt="Man">';    
-    }
-    if(colores == 'rojo'){
-        document.getElementById('body').classList.add('rojo');
-    }
-    else if(colores == 'negro'){
-        document.getElementById('body').classList.add('negro');
-    }
-    else if(colores == 'morado'){
-        document.getElementById('body').classList.add('morado');
-    }
-    else {
-        document.getElementById('body').classList.add('azul');
-    }
-
-    
+    if(nombres == ''){user_div.innerHTML = 'Usuario';}
+    else{user_div.innerHTML = nombres;}
+    if(generos == 'mujer'){img_div.innerHTML = '<img src="images/woman.png" alt="Woman">';}
+    else{img_div.innerHTML = '<img src="images/man.png" alt="Man">';}
+    if(colores == 'rojo'){document.getElementById('body').classList.add('rojo');}
+    else if(colores == 'negro'){document.getElementById('body').classList.add('negro');}
+    else if(colores == 'morado'){document.getElementById('body').classList.add('morado');}
+    else {document.getElementById('body').classList.add('azul');}
 }
 function movidaPc(){
     const opciones = ['roca','papel','tijera'];
@@ -53,14 +34,20 @@ function ganar(opcionUser, opcionComp){
     userScore++;
     userScore_span.innerHTML = userScore;
     result_div.innerHTML = "Muy bien 😄!!! "+opcionUser+" > "+opcionComp;
+    document.getElementById('user-label').classList.add('pulse');
+    document.getElementById('pc-label').classList.remove('pulse');
 }
 function perder(opcionUser, opcionComp){
     pcScore++;
     pcScore_span.innerHTML = pcScore;
     result_div.innerHTML = "Perdiste 😓"+opcionUser+" < "+opcionComp;
+    document.getElementById('user-label').classList.remove('pulse');
+    document.getElementById('pc-label').classList.add('pulse');
 }
 function empate(opcionUser, opcionComp){
     result_div.innerHTML = "Empate 😛"+opcionUser+" = "+opcionComp;
+    document.getElementById('user-label').classList.add('pulse');
+    document.getElementById('pc-label').classList.add('pulse');
 }
 function game(opcion){
     const movidaComp = movidaPc();
