@@ -21,7 +21,7 @@ function ganar(opcionUser, opcionComp){
 }
 function perder(opcionUser, opcionComp){
     pcScore++;
-    pcScore_span.innerHTML = userScore;
+    pcScore_span.innerHTML = pcScore;
     result_div.innerHTML = "Perdiste 😓"+opcionUser+" < "+opcionComp;
 }
 function empate(opcionUser, opcionComp){
